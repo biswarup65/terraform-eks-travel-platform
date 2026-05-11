@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: nginx-service
+  name: travel-platform-service
 
 spec:
+  type: LoadBalancer
+
   selector:
-    app: nginx
+    app: travel-platform-flask
 
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
-
-  type: LoadBalancer
+      targetPort: 5000

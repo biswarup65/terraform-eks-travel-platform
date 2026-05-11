@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Popular Destinations</h1>
+
+    {% for destination in destinations %}
+    <div class="card">
+        <h2>{{ destination.name }}</h2>
+        <p>{{ destination.description }}</p>
+        <h3>{{ destination.price }}</h3>
+
+        <a href="/booking">
+            <button>Book Now</button>
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

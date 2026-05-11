@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero-overlay p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background: #38bdf8;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* Destination Cards */
+
+.destinations-section {
+    padding: 100px 50px;
+}
+
+.destinations-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+
+    width: 320px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.card-content button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #38bdf8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Booking */
+
+.booking-section {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-container {
+
+    width: 400px;
+
+    background: rgba(255,255,255,0.08);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.booking-container h1 {
+    margin-bottom: 30px;
+}
+
+.booking-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-container input,
+.booking-container select {
+
+    padding: 14px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 10px;
+}
+
+.booking-container button {
+
+    padding: 14px;
+
+    border: none;
+
+    background: #38bdf8;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.success-box {
+
+    margin-top: 20px;
+
+    background: #16a34a;
+
+    padding: 15px;
+
+    border-radius: 10px;
+}
+
+
+/* Testimonials */
+
+.testimonials {
+    padding: 100px 50px;
+    background: #111827;
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.testimonial {
+    width: 350px;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+}
+
+
+/* Responsive */
+
+@media(max-width: 768px) {
+
+    .hero-overlay h1 {
+        font-size: 45px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

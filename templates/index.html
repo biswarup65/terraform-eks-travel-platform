@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Explorer</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">Travel Explorer</div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/destinations">Destinations</a></li>
+            <li><a href="/booking">Booking</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-overlay">
+
+            <h1>Explore The World With Us</h1>
+
+            <p>
+                Discover premium destinations and unforgettable experiences.
+            </p>
+
+            <a href="/destinations">
+                <button class="hero-btn">
+                    Explore Destinations
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Destinations -->
+
+    <section class="destinations-section">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="cards-container">
+
+            {% for destination in destinations %}
+
+            <div class="destination-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/' + destination.image) }}"
+                    alt="{{ destination.name }}"
+                >
+
+                <div class="card-content">
+
+                    <h3>{{ destination.name }}</h3>
+
+                    <p>{{ destination.description }}</p>
+
+                    <h4>{{ destination.price }}</h4>
+
+                    <a href="/booking">
+                        <button>Book Now</button>
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- Testimonials -->
+
+    <section class="testimonials">
+
+        <h2>What Our Travelers Say</h2>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial">
+                <p>
+                    “Amazing experience! Everything was well organized.”
+                </p>
+                <h4>- Rahul Sharma</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    “The best vacation booking platform I've used.”
+                </p>
+                <h4>- Priya Das</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Travel Explorer | Built with Flask & Docker
+        </p>
+
+    </footer>
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+</body>
+</html>
