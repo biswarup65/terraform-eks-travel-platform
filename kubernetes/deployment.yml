@@ -21,7 +21,7 @@ spec:
       containers:
       - name: travel-platform-container
 
-        image: biswarup65/travel-app-flask:v1
+        image: biswarup65/travel-app-flask:v2
 
         ports:
         - containerPort: 5000
