@@ -1,6 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
+
+from prometheus_client import Counter
+from prometheus_client import generate_latest
+from prometheus_client import CONTENT_TYPE_LATEST
 
 app = Flask(__name__)
+
+# Prometheus metric
+REQUEST_COUNT = Counter(
+    'app_requests_total',
+    'Total HTTP Request Count'
+)
 
 destinations = [
 
@@ -62,6 +72,11 @@ destinations = [
 
 ]
 
+# Count every request
+@app.before_request
+def before_request():
+    REQUEST_COUNT.inc()
+
 
 @app.route("/")
 def home():
@@ -91,6 +106,15 @@ def booking():
         "booking.html",
         success_message=success_message,
         destinations=destinations
+    )
+
+
+# Prometheus metrics endpoint
+@app.route("/metrics")
+def metrics():
+    return Response(
+        generate_latest(),
+        mimetype=CONTENT_TYPE_LATEST
     )
 
 

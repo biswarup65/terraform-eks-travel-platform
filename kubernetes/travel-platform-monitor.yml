@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+
+metadata:
+  name: travel-platform-monitor
+  namespace: monitoring
+  labels:
+    release: monitoring
+
+spec:
+  selector:
+    matchLabels:
+      app: travel-platform-flask
+
+  namespaceSelector:
+    any: true
+
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
