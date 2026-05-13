@@ -71,13 +71,10 @@ terraform-eks-travel-platform/
 │   ├── templates/
 │   └── static/
 │
-├── k8s/
+├── kubernetes/
 │   ├── deployment.yaml
 │   ├── service.yaml
 │   └── travel-platform-monitor.yaml
-│
-├── grafana/
-│   └── travel-platform-dashboard.json
 │
 ├── screenshots/
 │
@@ -86,7 +83,7 @@ terraform-eks-travel-platform/
 
 ---
 
-# 🚀 Features Implemented
+## 🚀 Features Implemented
 
 ## ✅ Infrastructure Provisioning using Terraform
 
@@ -127,23 +124,23 @@ terraform-eks-travel-platform/
 
 ---
 
-# 🐳 Docker Commands
+## 🐳 Docker Commands
 
 ## Build Docker Image
 
 ```bash
-docker build -t <dockerhub-username>/travel-platform:v1 .
+docker build -t <dockerhub-username>/travel-flask-platform:v3 .
 ```
 
 ## Push Docker Image
 
 ```bash
-docker push <dockerhub-username>/travel-platform:v1
+docker push <dockerhub-username>/travel-flask-platform:v3
 ```
 
 ---
 
-# ☁️ Terraform Commands
+## ☁️ Terraform Commands
 
 ## Initialize Terraform
 
@@ -165,7 +162,7 @@ terraform apply
 
 ---
 
-# ☸️ Kubernetes Deployment
+## ☸️ Kubernetes Deployment
 
 ## Apply Kubernetes Manifests
 
@@ -183,7 +180,7 @@ kubectl get nodes
 
 ---
 
-# 📊 Monitoring Stack Setup
+## 📊 Monitoring Stack Setup
 
 ## Install kube-prometheus-stack
 
@@ -199,47 +196,54 @@ helm install monitoring prometheus-community/kube-prometheus-stack \
 
 ---
 
-# 📈 Grafana Dashboard Metrics
+## 📈 Grafana Dashboard Metrics
 
 The Grafana dashboard monitors:
 
-- Total HTTP Requests
 - Request Rate
 - Pod CPU Usage
 - Pod Memory Usage
 - Pod Restart Count
 - Kubernetes Cluster Metrics
 
----
 
-# 📸 Screenshots to Include
-
-Create a `screenshots/` folder and include the following:
-
-| Screenshot | Description |
-|---|---|
-| grafana-dashboard.png | Grafana Monitoring Dashboard |
-| prometheus-targets.png | Prometheus Targets showing app status UP |
-| eks-pods.png | Kubernetes Pods running in EKS |
-| flask-homepage.png | Flask Travel Platform Homepage |
-| terraform-apply.png | Terraform Infrastructure Provisioning |
-| loadbalancer-service.png | Kubernetes LoadBalancer Service |
+![Grafana Dashboard Metrics-1]()
 
 ---
 
-# 🔍 Prometheus Metrics Endpoint
+![Grafana Dashboard Metrics-2]()
 
-```text
-/metrics
-```
-
-Example metric:
-
-```text
-app_requests_total
-```
 
 ---
+
+
+
+## 🔍 Prometheus Metrics Endpoint
+
+
+![Prometheus Metrics Endpoint]()
+
+---
+
+## ☸️ EKS Pods
+
+![EKS-Pods]()
+
+---
+
+## 🌐 Application Preview (Deployed)
+
+![flask-homepage-0]()
+
+
+---
+
+
+![flask-homepage-1]()
+
+
+---
+
 
 # 📚 Key Learnings
 
@@ -256,23 +260,4 @@ Through this project, I gained hands-on experience with:
 
 ---
 
-# 🚧 Future Improvements
 
-- CI/CD using GitHub Actions
-- HTTPS using AWS ACM
-- ALB Ingress Controller
-- Horizontal Pod Autoscaler (HPA)
-- Fluent Bit + CloudWatch Logging
-- ArgoCD GitOps
-- Terraform Modules
-- OpenTelemetry & Jaeger Tracing
-
----
-
-# 👨‍💻 Author
-
-Biswarup Basak
-
----
-
-# ⭐ If you found this project useful, consider giving it a star!
