@@ -167,7 +167,7 @@ terraform apply
 ## Apply Kubernetes Manifests
 
 ```bash
-kubectl apply -f k8s/
+kubectl apply -f kubernetes/
 ```
 
 ## Verify Resources
@@ -245,7 +245,7 @@ The Grafana dashboard monitors:
 ---
 
 
-# 📚 Key Learnings
+## 📚 Key Learnings
 
 Through this project, I gained hands-on experience with:
 
