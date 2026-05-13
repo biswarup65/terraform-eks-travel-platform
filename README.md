@@ -4,7 +4,7 @@ A production-style cloud-native deployment project demonstrating how to provisio
 
 ---
 
-# 📌 Project Overview
+## 📌 Project Overview
 
 This project demonstrates an end-to-end Kubernetes deployment workflow on AWS using Infrastructure as Code (IaC), containerization, Kubernetes orchestration, and observability tools.
 
@@ -18,7 +18,7 @@ The project includes:
 
 ---
 
-# 🏗️ Architecture
+## 🏗️ Architecture
 
 ```text
 Users
@@ -36,7 +36,7 @@ Grafana Dashboard
 
 ---
 
-# ⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -53,7 +53,7 @@ Grafana Dashboard
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```bash
 terraform-eks-travel-platform/
