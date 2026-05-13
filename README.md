@@ -207,11 +207,11 @@ The Grafana dashboard monitors:
 - Kubernetes Cluster Metrics
 
 
-![Grafana Dashboard Metrics-1]()
+![Grafana Dashboard Metrics-1](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/grafana-dashboard-1.png)
 
 ---
 
-![Grafana Dashboard Metrics-2]()
+![Grafana Dashboard Metrics-2](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/grafana-dashboard-2.png)
 
 
 ---
@@ -221,25 +221,25 @@ The Grafana dashboard monitors:
 ## 🔍 Prometheus Metrics Endpoint
 
 
-![Prometheus Metrics Endpoint]()
+![Prometheus Metrics Endpoint](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/prometheus-targets.png)
 
 ---
 
 ## ☸️ EKS Pods
 
-![EKS-Pods]()
+![EKS-Pods](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/eks-pods.png)
 
 ---
 
 ## 🌐 Application Preview (Deployed)
 
-![flask-homepage-0]()
+![flask-homepage-0](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/flask-homepage-0.png)
 
 
 ---
 
 
-![flask-homepage-1]()
+![flask-homepage-1](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/flask-book-homepage-1.png)
 
 
 ---
