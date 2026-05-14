@@ -2,6 +2,8 @@
 
 A production-style cloud-native deployment project demonstrating how to provision and manage an Amazon EKS (Elastic Kubernetes Service) cluster using Terraform, deploy a containerized Python Flask application on Kubernetes, and implement monitoring using Prometheus and Grafana.
 
+![Project Banner](https://github.com/biswarup65/terraform-eks-travel-platform/blob/main/screenshots/terraform-eks-travel-platform-arch-diagram-.png)
+
 ---
 
 ## 📌 Project Overview
